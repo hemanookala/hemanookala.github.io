@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="moTEAvate" content="bubble tea, motivation">
+<meta name="author" content="Hema Nookala">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Menu</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="global.css" rel="stylesheet" type="text/css">
+<link href="my-styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="background">
+	<!-- Logo on the left -->
+	<div>
+	<a href="index.html"> 
+		<img border="0" alt="moTEAvate" src="images/Logo_transparent.png" class = "responsive_pic">
+	</a>	
+	</div>
+	<!-- navigation menu floating from the right -->
+	<div class="topnav" id = "myTopnav">
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+		<a href="#" >Account</a>
+		<a href="#" >Contact Us</a>
+		<a href="#" >FAQ</a>
+		<a href="#" >Our Cafe</a>
+		<a href="menu.html" >Menu</a>
+	</div>
+	<br>
+
+	<div>
+		<h1> Choose Your Sugar Level! </h1>
+	</div>
+
+	<br>
+	
+
+	<ul class="breadcrumb">
+		<li><a href="customize_size.html">Size</a></li>
+		<li><a href="customize_tea.html">Tea</a></li>
+		<li><a href="customize_milk.html">Milk</a></li>
+		<li><a href="customize_toppings_1.html">First Topping</a></li>
+		<li><a href="customize_toppings_2.html">Second Topping</a></li>
+		<li>Sugar</li>
+
+	</ul>
+
+
+	<div>
+		
+	</div>
+
+	<div class="flex-container"> 
+
+	<div class = "box">
+		<img border="0" alt="size" id="myImage" style="width:100%">
+	</div>
+
+
+	<div class="slidecontainer" class="bar">
+
+		<h2> <span id="value"></span> % </h2>
+
+		<input type="range" min="0" max="100" value ="50" class="slider" id ="myRange" step="25">
+		
+	</div>
+	
+	</div>
+
+
+	<div>
+		<a href="customize_ice.html" class = "button"> Confirm </a>
+	</div>
+	
+
+<script>
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("value");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+var sugar = 50; //variable to be controlled
+
+
+document.getElementById('myImage').src = "images/50_Sugar_logo.png";
+//function is called when slider value changes
+slider.addEventListener("change", function() { 
+  sugar = myRange.value;  
+ 
+
+  	if(slider.value==0) {
+    document.getElementById('myImage').src = "images/0_Sugar_logo.png";
+	}
+	else if(slider.value==25) {
+    document.getElementById('myImage').src = "images/25_Sugar_logo.png";
+	}
+	else if(slider.value==50) {
+    document.getElementById('myImage').src = "images/50_Sugar_logo.png";
+	}
+	else if(slider.value==75) {
+    document.getElementById('myImage').src = "images/75_Sugar_logo.png";
+	}
+	else if(slider.value==100) {
+    document.getElementById('myImage').src = "images/100_Sugar_logo.png";
+	}
+
+		localStorage.setItem("sugar", sugar);
+		document.getElementById("result_sugar").innerHTML=localStorage.getItem("sugar");
+		
+	
+
+
+})
+
+
+</script>
+
+</body>
+</html>

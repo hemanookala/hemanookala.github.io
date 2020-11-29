@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="moTEAvate" content="bubble tea, motivation">
+<meta name="author" content="Hema Nookala">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Menu</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="global.css" rel="stylesheet" type="text/css">
+<link href="my-styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="background" onload="getData()">
+	<!-- Logo on the left -->
+	<div>
+	<a href="index.html"> 
+		<img border="0" alt="moTEAvate" src="images/Logo_transparent.png" class = "responsive_pic">
+	</a>	
+	</div>
+	<!-- navigation menu floating from the right -->
+	<div class="topnav" id = "myTopnav">
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+		<a href="#" >Account</a>
+		<a href="#" >Contact Us</a>
+		<a href="#" >FAQ</a>
+		<a href="#" >Our Cafe</a>
+		<a href="menu.html" >Menu</a>
+	</div>
+
+	<br>
+
+	<div>
+		<h1> Confirm Order </h1>
+	</div>
+	
+	<br>
+
+	<ul class="breadcrumb">
+		<li><a href="customize_size.html">Size</a></li>
+		<li><a href="customize_tea.html">Tea</a></li>
+		<li><a href="customize_milk.html">Milk</a></li>
+		<li><a href="customize_toppings_1.html">First Topping</a></li>
+		<li><a href="customize_toppings_2.html">Second Topping</a></li>
+		<li><a href="customize_sugar.html">Sugar</a></li>
+		<li><a href="customize_ice.html">Ice</a></li>
+		<li>Confirm</li>
+	</ul>
+
+
+
+
+	<div class="flex-container"> 
+
+	<div class = "box">
+		<img border="0" alt="size" src="images/Final_BBT_Logo.png" style="width:70%">
+	</div>
+
+
+	<div class="confirmcontainer" class="confirm">
+		
+		<p id="size_result" class="bold"></p>
+		<p id="tea_result" class="bold"></p>		
+		<p id="milk_result" class="bold"></p>
+		<p id="topping_result" class="bold"></p>
+		<p id="topping_result_2" class="bold"></p>
+		<p id="result_sugar" class="bold"></p>
+		<p id="result_ice" class="bold"></p>
+
+
+			</div>
+
+	<div class="price">
+		<p> <b>Price:</b> $ 5.20 </p>
+		<p> <b>HST:</b>  $1.30 </p>
+		<p> <b>Total:  $7:50 </p></b>
+	
+	</div>
+
+	<div>
+		<br>
+	</div>
+</div>
+
+
+
+
+	<div>
+		<a href="#" class = "button"> Confirm </a>
+	</div>
+	
+
+
+
+<script>
+
+
+//function is called when slider value changes
+function getData(){
+
+	document.getElementById("result_sugar").innerHTML="Sugar: " + localStorage.getItem("sugar");
+	document.getElementById("tea_result").innerHTML ="Tea: "+ localStorage.getItem("tea_choice");
+	document.getElementById("size_result").innerHTML = "Size: "+localStorage.getItem("size");
+	 document.getElementById("topping_result_2").innerHTML = "Second Topping: "+ localStorage.getItem("topping_choice_2");
+      document.getElementById("topping_result").innerHTML ="First Topping: "+localStorage.getItem("topping_choice");
+       document.getElementById("milk_result").innerHTML = "Milk: "+localStorage.getItem("milk_choice");
+       document.getElementById("result_ice").innerHTML="Ice: "+localStorage.getItem("ice");
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="moTEAvate" content="bubble tea, motivation">
+<meta name="author" content="Hema Nookala">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Menu</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="global.css" rel="stylesheet" type="text/css">
+<link href="my-styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="background">
+	<!-- Logo on the left -->
+	<div>
+	<a href="index.html"> 
+		<img border="0" alt="moTEAvate" src="images/Logo_transparent.png" class = "responsive_pic">
+	</a>	
+	</div>
+	<!-- navigation menu floating from the right -->
+	<div class="topnav" id = "myTopnav">
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+		<a href="#" >Account</a>
+		<a href="#" >Contact Us</a>
+		<a href="#" >FAQ</a>
+		<a href="#" >Our Cafe</a>
+		<a href="menu.html" >Menu</a>
+	</div>
+	<br>
+	<br>
+
+	<div>
+		<h1> Choose Your Tea! </h1>
+	</div>
+
+	<br>
+	
+	<ul class="breadcrumb">
+		<li><a href="customize_size.html">Size</a></li>
+		<li>Tea</li>
+		
+	</ul>
+	
+
+	<div class = "radioGroup">
+			
+				<label for="blackTea"> Black Tea<br/>
+					<input type="radio" name="tea" id="blackTea" value="Black Tea" onclick="myTea(this.value)" > 
+					<img border="0" alt="moTEAvate" src="images/Black_Tea_logo.png" style="width:150px">
+				</label>
+
+				<label for= "greenTea"> Green Tea<br/>
+					<input type="radio" name="tea" id="greenTea" value="Green Tea" onclick="myTea(this.value)">
+					<img border="0" alt="moTEAvate" src="images/Green_Tea_logo.png" style="width:150px">
+				</label>
+
+				<label for= "oolongTea"> Oolong Tea <br/>
+					<input type="radio" name="tea" id="oolongTea" value="Oloong Tea" onclick="myTea(this.value)">
+					<img border="0" alt="moTEAvate" src="images/Oolong_Tea_logo.png" style="width:150px">
+				</label>
+
+				<label for= "whiteTea"> White Tea<br/>
+					<input type="radio" name="tea" id="whiteTea" value="White Tea" onclick="myTea(this.value)">
+					<img border="0" alt="moTEAvate" src="images/White_Tea_logo.png" style="width:150px">
+				</label>
+
+				
+	</div>
+
+	
+	
+	
+	<!-- 
+
+	<div> 
+		
+		<input type="text" id="tea_result">
+		<input type="text" id="result_tea">
+		<p id=tea_choice></p>
+		<p id="result_tea"></p>
+		
+		
+	</div>
+
+	 -->
+	<br>
+	<br>
+
+		<a type = "button" href="customize_milk.html" class="button" onclick="displayRadioValue()"> Confirm </a>
+	
+	<br>
+
+	<div id="result"></div>
+	<div id="tea_result"></div>
+	<div id="size_result"></div>
+	
+
+<script>
+
+	 function displayRadioValue() { 
+            var ele = document.getElementsByName('tea'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) {
+                document.getElementById("result").innerHTML
+                        = "Tea: "+ele[i].value; 
+                localStorage.setItem("tea_choice", ele[i].value);
+                document.getElementById("tea_result").innerHTML = localStorage.getItem("tea_choice");
+                document.getElementById("size_result").innerHTML = localStorage.getItem("size");
+            }
+            } 
+        } 
+
+// <!-- to save the value of the radio button -->
+// 
+var tea_result="Black Tea";
+
+function myTea(tea){
+	document.getElementById("tea_result").value=tea;
+}
+// 
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+
+
+
+
+
+
+
+	
+
+
+</script>
+
+</body>
+</html>

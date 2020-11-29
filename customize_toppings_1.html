@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="moTEAvate" content="bubble tea, motivation">
+<meta name="author" content="Hema Nookala">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Menu</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="global.css" rel="stylesheet" type="text/css">
+<link href="my-styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="background">
+	<!-- Logo on the left -->
+	<div>
+	<a href="index.html"> 
+		<img border="0" alt="moTEAvate" src="images/Logo_transparent.png" class = "responsive_pic">
+	</a>	
+	</div>
+	<!-- navigation menu floating from the right -->
+	<div class="topnav" id = "myTopnav">
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+		<a href="#" >Account</a>
+		<a href="#" >Contact Us</a>
+		<a href="#" >FAQ</a>
+		<a href="#" >Our Cafe</a>
+		<a href="menu.html" >Menu</a>
+	</div>
+	<br>
+	<br>
+
+	<div>
+		<h1> Choose Your First Topping! </h1>
+	</div>
+
+	<br>
+
+	<ul class="breadcrumb">
+		<li><a href="customize_size.html">Size</a></li>
+		<li><a href="customize_tea.html">Tea</a></li>
+		<li><a href="customize_milk.html">Milk</a></li>
+		<li>First Topping</li>
+		
+	</ul>
+	
+	
+	<div class = "radioGroup">
+			
+				<label for="tapioca"> Tapioca <br/>
+					<input type="radio" name="topping" id="tapioca" value="Tapioca" onclick="myTea(this.value)" > 
+					<img border="0" alt="moTEAvate" src="images/Tapioca_logo.png" style="width:150px">
+				</label>
+
+				<label for="grassJelly"> Grass Jelly <br/>
+					<input type="radio" name="topping" id="grassJelly" value="Grass Jelly" onclick="myTea(this.value)" > 
+					<img border="0" alt="moTEAvate" src="images/Grass_Jelly_logo.png" style="width:150px">
+				</label>
+			
+				<label for= "coffeeJelly"> Coffee Jelly <br/>
+					<input type="radio" name="topping" id="coffeeJelly" value="Coffee Jelly" onclick="myTea(this.value)">
+					<img border="0" alt="moTEAvate" src="images/Coffee_Jelly_logo.png" style="width:150px">
+				</label>
+
+				<label for= "aloe"> Aloe <br/>
+					<input type="radio" name="topping" id="aloe" value="Aloe" onclick="myTea(this.value)">
+					<img border="0" alt="moTEAvate" src="images/Aloe_logo.png" style="width:150px">
+				</label>
+
+				<label for="redBean"> Red Bean <br/>
+					<input type="radio" name="topping" id="redBean" value="Red Bean" onclick="myTea(this.value)" > 
+					<img border="0" alt="moTEAvate" src="images/Red_Bean_logo.png" style="width:150px">
+				</label>
+
+				<label for="pudding"> Pudding <br/>
+					<input type="radio" name="topping" id="pudding" value="Pudding" onclick="myTea(this.value)" > 
+					<img border="0" alt="moTEAvate" src="images/Pudding_logo.png" style="width:150px">
+				</label>
+			
+				<label for= "sago"> Sago <br/>
+					<input type="radio" name="topping_2" id="sago" value="Sago" onclick="myTea(this.value)">
+					<img border="0" alt="moTEAvate" src="images/Sago_logo.png" style="width:150px">
+				</label>
+
+
+				<label for= "noTopping"> No Topping <br/>
+					<input type="radio" name="topping" id="noTopping" value="No Topping" onclick="myTea(this.value)">
+					<img border="0" alt="moTEAvate" src="images/No_Topping_logo.png" style="width:150px">
+				</label>
+
+				
+	</div>
+	
+	
+	 
+<br>
+	
+		<a type = "button" href="customize_toppings_2.html" class="button" onclick="displayRadioValue()"> Confirm </a>
+	
+	<br>
+
+	<div id="result"></div>
+	<div id="topping_result"></div>
+	
+	
+
+<script>
+
+	 function displayRadioValue() { 
+            var ele = document.getElementsByName('topping'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) {
+                document.getElementById("result").innerHTML
+                        = "topping: "+ele[i].value; 
+                localStorage.setItem("topping_choice", ele[i].value);
+                document.getElementById("topping_result").innerHTML = localStorage.getItem("topping_choice");
+            	}
+            } 
+        } 
+
+
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+	    x.className += " responsive";
+	  } else {
+	    x.className = "topnav";
+	  }
+	}
+
+
+
+</script>
+
+</body>
+</html>

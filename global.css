@@ -1,0 +1,409 @@
+/* RESET */
+
+
+h1 {
+	display:block;
+	margin:auto;
+	text-align:center;
+	text-decoration: bold;
+	font-size:55px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+	font-family: 'Quicksand', sans-serif;
+	font-size:50px;
+	display:block;
+	text-align:center;
+}
+
+
+p {
+	font-size:20px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.bold{
+	font-weight:bold;
+}
+.topnav{
+	background-color:white;
+	overflow:hidden;
+}
+.topnav a {
+
+	float: right;
+	display:block;
+	color: black;
+	text-align: center;
+	padding: 14px 95px;
+	text-decoration: none;
+	font-size:45px;
+	font-family: 'Quicksand', sans-serif;
+
+}
+
+.topnav a:hover{
+	background-color:#D68E89;
+	color:white;
+}
+
+.topnav a:active {
+	background-color:#AC79C5;
+	text-decoration: bold;
+	color: white;
+}
+
+.topnav .icon{
+	display:none;
+}
+
+
+
+.responsive_pic{
+	width:100%;
+	max-width:115px;
+	height:auto;
+	float:left !important;
+	/*background: white; */
+}
+
+.background {
+	background-color:#e5dcd5;
+}
+
+.imgbox{
+	display:grid;
+	height:90%;
+}
+.center-fit{
+	max-width:100%;
+	max-height:90vh;
+	margin:auto;
+}
+.cover_pic{
+	width:100%;
+	max-width:1400px;
+	height:auto;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.footer a{
+	float: right;
+	display:block;
+	color: black;
+	text-align: center;
+	padding: 14px 14px;
+	text-decoration: bold;
+	font-size:18px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.footer a:hover{
+	background-color:pink;
+	color: white;
+}
+
+/*
+.preset{
+	display:inline-block;
+	vertical-align:top;
+	width:50%
+	height:100vh;
+	background-color:#5C5CD6;
+	top: 2;
+  
+}
+
+.customize{
+	display:inline-block;
+	vertical-align:top;
+	width:50%
+	height:100vh;
+	background-color:#AC79C5;
+	top: 2;
+
+}
+*/
+
+
+
+.split{
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 2;
+  overflow-x: hidden;
+  padding-top: -30px;
+}
+
+.left{
+	left:0;
+	background-color:#9393CC
+	/*5C5CD6;*/
+}
+
+.right{
+	right:0;
+	background-color:#BD94D1
+	/*AC79C5;*/
+}
+
+.centered{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	text-align:center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+/*width of the outside container holding the slider*/
+.slidecontainer{
+	width:100%;
+}
+
+.confirmcontainer{
+	width:50%;
+}
+
+.confirm{
+	background-color: none;
+	width:50%;
+	margin:10px;
+	align-content:center;
+	overflow:hidden;
+}
+
+/*the actual slider*/
+.slider {
+	-webkit-appearance:none;     /*override default CSS*/
+	appearance: none;
+	width:75%;
+	height: 35px;
+  	border-radius: 5px;  
+	background:#D87466;
+	outline:none;
+	opacity:0.7;
+	-webkit-transition:.2s;
+	transition:opacity 0.2;
+	float:right;
+}
+
+/*mouse over slider effects*/
+
+.slider:hover{
+	opacity:1;
+}
+
+/*slider handle on different browsers*/
+
+.slider::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	appearance:none;
+	width: 45px;
+	height: 45px;
+  	border-radius: 10%; 
+	background: #5C5CD6;
+	cursor:pointer;
+}
+
+.slider::-moz-range-thumb{
+	width:45px;
+	height: 45px;
+  	border-radius: 50%; 
+	background:#4caf50;
+	cursor:pointer;
+}
+
+.flex-container{
+	display:flex;
+	flex-wrap:nowrap;
+	
+}
+
+.flex-container .box{
+	background-color:none;
+	width:33%;
+	margin:5px;
+	align-content: center;
+	display: block;
+  	overflow:hidden;
+  	float:right;
+ 
+}
+
+.flex-container .bar{
+	background-color: none;
+	width:100%;
+	margin:10px;
+	align-content:center;
+	overflow:hidden;
+
+}
+
+.button{
+	border:solid;
+	border-radius:5%;
+	padding: 1.5vh 1.5vh 1.5vh 1.5vh;
+	color:black;
+	background-color:white;
+	text-align:center;
+	text-decoration:none;
+	width:10%;
+	display:block;
+	margin: auto;
+	font-size:6vh;
+	cursor:pointer;
+	font-family: 'Quicksand', sans-serif;
+	
+
+}
+
+.button:hover{
+	display:block;
+	color:white;
+	background-color:#D87466;
+	text-decoration:bold;
+}
+
+
+.container{
+	 display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.radioGroup label{
+	display:inline-block;
+	margin: 2em 1em;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	cursor:pointer;
+	width:20%;
+	margin:auto;
+	text-align:center;
+	padding: 20px 20px;	
+	font-size:30px;
+	
+}
+
+.radioGroup label input[type="radio"]{
+	margin:1em auto;
+}
+
+.single_radio {
+	width:5%;
+	float:center;
+}
+
+/*styling the breadcrumbs*/
+
+ul.breadcrumb{
+	padding: 10px 16px;
+	list-style:none;
+	background-color:#eee;
+	font-family: 'Quicksand', sans-serif;
+	display:block;
+	margin:auto;
+	text-align:center;
+
+}
+/*display items side by side*/
+ul.breadcrumb li{
+	display:inline;
+	font-size:15px;
+}
+/*add a slash symbol*/
+ul.breadcrumb li+li:before{
+	padding:8px;
+	color:black;
+	content:"/\00a0";
+}
+/*add colours to all links in the list*/
+ul.breadcrumb li a{
+	color:#D87466;
+	text-decoration:none;
+}
+/*adding colour on mouseover*/
+ul.breadcrumb li a:hover{
+	color:#01447e;
+	text-decoration:underline;
+}
+
+/*settinng what the nav bar should look like at the max width of 600px and show the icon instead of the menu items*/
+
+@media screen and (max-width: 1000px){
+	.topnav a {display:none;}
+	.topnav a.icon{ 
+	
+	right: 0;
+    top: 0;
+	display:block;
+}
+
+}
+
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+	font-size:30px;
+  }
+}
+
+/*setting the nav bar for smaller screens than my large monitor*/
+
+@media screen and (max-width: 1500px){
+	.topnav a{
+	padding: 14px 50px;
+	text-decoration: none;
+	font-size:36px;
+	font-family: 'Quicksand', sans-serif;
+	}
+	.responsive_pic{
+		max-width:100px;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+	font-size:35px;
+  }
+}
