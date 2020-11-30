@@ -298,7 +298,6 @@ p {
 	cursor:pointer;
 	width:20%;
 	margin:auto;
-	text-align:center;
 	padding: 20px 20px;	
 	font-size:30px;
 	
@@ -308,9 +307,25 @@ p {
 	margin:1em auto;
 }
 
-.single_radio {
-	width:5%;
-	float:center;
+.radioGroup_1 label{
+	display:inline-block;
+	margin: 2em 1em;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	cursor:pointer;
+	width:20%;
+	margin:auto;
+	padding: 20px 4em;	
+	font-size:45px;
+	
+}
+
+.radioGroup_1 label input[type="radio"]{
+	margin:1em auto;
+}
+
+.allTabs{
+	text-align:center;
 }
 
 /*styling the breadcrumbs*/
