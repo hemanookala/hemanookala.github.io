@@ -45,25 +45,20 @@
 		<li>Size</li>
 	</ul>
 
-	<div>
-		
-	</div>
 
+	<div class = "radioGroup_1" class="allTabs">
+			
+				<label for="regular"> Regular <br/>
+					<input type="radio" name="size" id="regular" value="Regular" onclick="myTea(this.value)" > 
+					<img border="0" alt="moTEAvate" src="images/Regular_Size_logo.png" style="width:175px">
+				</label>
 
-	<div class="flex-container"> 
+				<label for="large"> Large <br/>
+					<input type="radio" name="size" id="large" value="Large" onclick="myTea(this.value)" > 
+					<img border="0" alt="moTEAvate" src="images/Large_Size_logo.png" style="width:175px">
+				</label>
 
-		<div class = "box">
-			<img border="0" alt="size" id="myImage" style="width:100%">
-		</div>
-
-
-		<div class="slidecontainer" class="bar">
-			<h2> <span id="demo"></span> </h2>
-
-			<input type="range" min="0" max="100" value ="0" class="slider" id ="myRange" step="100" onclick="sliderFunction()">
-		
-		</div>
-	
+				
 	</div>
 
 	<div>
@@ -72,6 +67,20 @@
 	
 
 <script>
+
+
+	 function displayRadioValue() { 
+            var ele = document.getElementsByName('size'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) {
+                document.getElementById("result").innerHTML
+                        = ele[i].value; 
+                localStorage.setItem("size", ele[i].value);
+                document.getElementById("size_choice").innerHTML = localStorage.getItem("size");
+            	}
+            } 
+        } 
 
 function myFunction() {
   var x = document.getElementById("myTopnav");
